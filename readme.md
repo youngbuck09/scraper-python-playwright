@@ -162,6 +162,34 @@ If a product page cannot be scraped, the error is logged and the scraper continu
 
 ---
 
+## Assumptions
+
+The following assumptions were made during development:
+
+* **Valid Input SKUs**
+  The SKUs provided in `skus.json` correspond to valid product pages on Amazon and Walmart.
+
+* **Product Page URL Structure**
+  Amazon products follow the URL format:
+  `https://www.amazon.com/dp/{SKU}`
+
+  Walmart products follow the URL format:
+  `https://www.walmart.com/ip/{SKU}`
+
+* **Page Structure Stability**
+  The scraper assumes that key product information such as title, price, and review count remain accessible through consistent HTML selectors.
+
+* **Dynamic Content Loading**
+  Product information may be dynamically loaded, so the scraper waits for page load states before extracting elements.
+
+* **Network Reliability**
+  Temporary failures such as slow page loads or intermittent network issues are handled using retry logic.
+
+* **Output File Generation**
+  The output file `product_data.csv` and log file `errors.log` are generated automatically when the scraper runs.
+
+---
+
 ## Limitations
 
 E-commerce websites employ sophisticated anti-bot protection mechanisms.
