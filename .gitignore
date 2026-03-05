@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+.env/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Playwright browser profile
+browser_profile/
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyCharm files
+.idea/
+
